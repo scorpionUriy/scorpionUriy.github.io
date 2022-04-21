@@ -284,6 +284,8 @@ template {
 .promo__link:hover {
     color: #000;
     text-decoration: none;
+    transform: translateY(-3px);
+    border-radius:50px ;
 }
 .title {
     font-weight: 700;
