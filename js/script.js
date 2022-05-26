@@ -40,7 +40,7 @@ let deadlines = document.querySelector(".deadlines");
 function calculatePrice() {
   const price = Number(one.value) + Number(two.value) + Number(three.value);
 
-  cost.textContent = price + " rub";
+  cost.textContent = price + " руб";
 
   deadlines.textContent =
     price >= 20000 ? "до 20 дней" : price > 1 ? "до 7 дней" : 0;
