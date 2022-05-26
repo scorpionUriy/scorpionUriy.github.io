@@ -28,24 +28,22 @@ counters.forEach((item, i) => {
   lines[i].style.width = item.innerHTML;
 });
 
-
-
-let one = document.querySelector(".one");
-let two = document.querySelector(".two");
-let three = document.querySelector(".three");
-let selectOne = document.querySelector("select");
-let cost = document.querySelector(".cost");
-let deadlines = document.querySelector(".deadlines");
+let one = document.querySelector('.one');
+let two = document.querySelector('.two');
+let three = document.querySelector('.three');
+let selectOne = document.querySelector('select');
+let cost = document.querySelector('.cost');
+let deadlines = document.querySelector('.deadlines');
 
 function calculatePrice() {
   const price = Number(one.value) + Number(two.value) + Number(three.value);
 
-  cost.textContent = price + " руб";
+  cost.textContent = price === 0 ? price : price + ' rub';
 
   deadlines.textContent =
-    price >= 20000 ? "до 20 дней" : price > 1 ? "до 7 дней" : 0;
+    price >= 20000 ? 'до 20 дней' : price > 1 ? 'до 7 дней' : 0;
 }
 
-selectOne.addEventListener("change", calculatePrice);
-selectTwo.addEventListener("change", calculatePrice);
-selectThree.addEventListener("change", calculatePrice);
+selectOne.addEventListener('change', calculatePrice);
+selectTwo.addEventListener('change', calculatePrice);
+selectThree.addEventListener('change', calculatePrice);
